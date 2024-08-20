@@ -31,13 +31,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
 	deferredPrompt = e;
 	// Update UI to notify the user they can add to home screen
 	//pwaBtn.style.display = 'block';
-	if(!PwaValue)
-	{
-		setTimeout(function(){
-			jQuery('.pwa-offcanvas').addClass('show');
-			jQuery('.pwa-backdrop').addClass('fade show');
-		}, 3000);
-	}
+	// if(!PwaValue)
+	// {
+	// 	setTimeout(function(){
+	// 		jQuery('.pwa-offcanvas').addClass('show');
+	// 		jQuery('.pwa-backdrop').addClass('fade show');
+	// 	}, 3000);
+	// }
 	pwaBtn.addEventListener('click', () => {
 		// hide our user interface that shows our A2HS button
 		//pwaBtn.style.display = 'none';
@@ -59,12 +59,12 @@ window.addEventListener('beforeinstallprompt', (e) => {
 	});
 });
 
-jQuery('.pwa-backdrop, .pwa-close, .pwa-btn').on('click',function(){
-	jQuery('.pwa-offcanvas').slideUp(500, function() {
-		jQuery(this).removeClass('show');
-	});
-	setTimeout(function(){
-		jQuery('.pwa-backdrop').removeClass('show');
-	}, 500);
-	setCookie(PwaKey, true);
-});
+// jQuery('.pwa-backdrop, .pwa-close, .pwa-btn').on('click',function(){
+// 	jQuery('.pwa-offcanvas').slideUp(500, function() {
+// 		jQuery(this).removeClass('show');
+// 	});
+// 	setTimeout(function(){
+// 		jQuery('.pwa-backdrop').removeClass('show');
+// 	}, 500);
+// 	setCookie(PwaKey, true);
+// });
