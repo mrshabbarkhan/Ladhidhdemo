@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from w3meat.w3itexpert.com/xhtml/edit-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:08:27 GMT -->
+<head>
+	
+    <!-- Title -->
+	<title>W3Meat: Meat Shop Mobile App Template ( Bootstrap + PWA )</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui, viewport-fit=cover">
+	<meta name="theme-color" content="#009688">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="index, follow"> 
+	 
+	<meta name="keywords" content="android, ios, mobile, application template, progressive web app, ui kit, multiple color, dark layout, meat shop">
+	<meta name="description" content="Experience the ultimate convenience of a mobile meat shop with our cutting-edge Bootstrap and PWA-powered template">
+
+	<meta property="og:title" content="W3Meat: Meat Shop Mobile App Template ( Bootstrap + PWA )">
+	<meta property="og:description" content="Experience the ultimate convenience of a mobile meat shop with our cutting-edge Bootstrap and PWA-powered template">
+	<meta property="og:image" content="../../w3meat.dexignzone.com/xhtml/social-image.png">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Favicons Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+	
+    
+	<!-- Global CSS -->
+	<link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/vendor/imageuplodify/imageuploadify.min.css">
+	
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+	
+</head>  
+<body>
+<div class="page-wraper">
+    
+    <!-- Preloader -->
+    <div id="preloader">
+		<div class="loader">
+			<div class="load-circle"><div></div><div></div></div>
+		</div>
+	</div>
+    <!-- Preloader end-->
+	
+	<!-- Header -->
+    <header class="header">
+		<div class="main-bar">
+			<div class="container">
+				<div class="header-content">
+					<div class="left-content">
+						<a href="javascript:void(0);" class="back-btn">
+							<i class="fa-solid fa-xmark"></i>
+						</a>
+					</div>
+					<div class="mid-content">
+						<h5 class="title mb-0 text-nowrap">Edit profile</h5>
+					</div>
+					<div class="right-content">
+						<a href="javascript:void(0);" class="text-dark font-20 back-btn">						
+							<i class="fa-solid fa-check"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <!-- Header End -->
+	
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container">
+            <div class="edit-profile">
+				<div class="profile-image">
+					<div class="avatar-upload">
+						<div class="avatar-preview">
+							<div id="imagePreview" style="background-image: url(assets/images/avatar/5.jpg);"> 			
+							</div>
+						</div>
+						<div class="change-btn">
+							<input type='file' class="form-control d-none"  id="imageUpload" accept=".png, .jpg, .jpeg">
+							<label for="imageUpload">
+								<i class="fa-regular fa-image"></i>
+							</label>
+						</div>
+					</div>	
+					<a href="javascript:void(0);">Change profile photo</a>
+				</div>
+				<form>
+					<div class="mb-3 input-group input-mini">
+						<input type="text" class="form-control" placeholder="Name">
+					</div>
+					<div class="mb-3 input-group input-mini">
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="mb-3 input-group input-mini">
+						<input type="url" class="form-control" placeholder="Website">
+					</div>
+					<div class="mb-3 input-group input-mini">
+						<input type="text" class="form-control" placeholder="Bio">
+					</div>
+				</form>
+            </div>
+			<ul class="link-list">
+				<li>
+					<a href="javascript:void(0);">Add Link</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">Switch to professional account</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">Create avatar</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">Personal information settings</a>
+				</li>
+			</ul>	
+        </div>
+    </div>
+    <!-- Page Content End-->
+</div> 
+<!--**********************************
+    Scripts
+***********************************-->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/imageuplodify/imageuploadify.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+	<script>
+	$(function () {
+		  $("#datepicker").datepicker({ 
+				autoclose: true, 
+				todayHighlight: true
+		  }).datepicker('update', new Date());
+	
+	});
+
+</script>
+<script>
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$('#imagePreview').css('background-image', 'url('+e.target.result +')');
+				$('#imagePreview').hide();
+				$('#imagePreview').fadeIn(650);
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+	$("#imageUpload").change(function() {
+		readURL(this);
+	});
+	$('.remove-img').on('click', function() {
+		var imageUrl = "https://w3meat.w3itexpert.com/xhtml/page-error-404.html";
+		$('.avatar-preview, #imagePreview').removeAttr('style');
+		$('#imagePreview').css('background-image', 'url(' + imageUrl + ')');
+	});
+</script>
+</script>
+
+<!-- Mirrored from w3meat.w3itexpert.com/xhtml/edit-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:08:28 GMT -->
+</html>

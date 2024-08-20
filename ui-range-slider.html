@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from w3meat.w3itexpert.com/xhtml/ui-range-slider.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:08:22 GMT -->
+<head>
+    
+    <!-- Title -->
+	<title>W3Meat: Meat Shop Mobile App Template ( Bootstrap + PWA )</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui, viewport-fit=cover">
+	<meta name="theme-color" content="#009688">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="index, follow"> 
+	 
+	<meta name="keywords" content="android, ios, mobile, application template, progressive web app, ui kit, multiple color, dark layout, meat shop">
+	<meta name="description" content="Experience the ultimate convenience of a mobile meat shop with our cutting-edge Bootstrap and PWA-powered template">
+
+	<meta property="og:title" content="W3Meat: Meat Shop Mobile App Template ( Bootstrap + PWA )">
+	<meta property="og:description" content="Experience the ultimate convenience of a mobile meat shop with our cutting-edge Bootstrap and PWA-powered template">
+	<meta property="og:image" content="../../w3meat.dexignzone.com/xhtml/social-image.png">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Favicons Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+</head>   
+<body>
+<div class="page-wraper">
+
+    <!-- Preloader -->
+    <div id="preloader">
+		<div class="loader">
+			<div class="load-circle"><div></div><div></div></div>
+		</div>
+	</div>
+    <!-- Preloader end-->
+	
+	<!-- Header -->
+    <header class="header">
+		<div class="main-bar">
+			<div class="container">
+				<div class="header-content">
+					<div class="left-content">
+						<a href="javascript:void(0);" class="back-btn">
+							<i class="fa-solid fa-arrow-left"></i>
+						</a>
+						<h4 class="title mb-0 text-nowrap">Rang Sliders</h4>
+					</div>
+					<div class="mid-content">
+					</div>
+					<div class="right-content">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <!-- Header End -->
+    
+    <div class="page-content">
+        <div class="container fb">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Basic slider</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="basic-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Slider tooltip</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="slider-tooltip ">
+                                <div id="slider-tooltips"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Slider behaviour (Snap)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="snap">
+                                <div id="snap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Slider behaviour (combined)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="combined">
+                                <div id="combined"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Disabling a slider</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="slider-disabled">
+                                <div id="disable1" class="mb-4"></div>
+                                <label class="d-flex align-items-center">
+                                    <input class="me-2" type="checkbox" id="checkbox1">
+                                    Disable slider
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Moving the slider by clicking pips</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="extra-padding  mb-5">
+                                <div class="slider-pips">
+                                    <div class="slider" id="slider-pips"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Changing the slider by key press</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="keypress-slider pt-5">
+                                <div id="keypress"></div>
+                                <input type="text" class="form-control my-4" id="input-with-keypress-1">
+                                <input type="text" class="form-control" id="input-with-keypress-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Soft limits</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="extra-padding mb-5">
+                                <div class="softlimit-slider">
+                                    <div id="soft"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Slider direction</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="slider-direction">
+                                <div id="slider-direction"></div>
+                                <div class="example-val" id="field"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+	
+    
+
+    
+</div>
+
+<!--**********************************
+    Scripts
+***********************************-->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/nouislider/nouislider.min.js"></script>
+<script src="assets/vendor/wnumb/wNumb.js"></script>
+<script src="assets/js/noui-slider.init.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+
+<!-- Mirrored from w3meat.w3itexpert.com/xhtml/ui-range-slider.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:08:23 GMT -->
+</html>
